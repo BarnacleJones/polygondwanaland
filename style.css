@@ -1,0 +1,110 @@
+
+/*Polygondwanaland*/
+
+.grid2{
+    height: 640px;
+    width: 360px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5fr  1fr 1fr 1fr 1fr 1fr;
+    font-size: small;
+    
+}
+.polyImg{
+    grid-area: 1 / 1 / span 1 / span 6;
+    background-image: url(images/poly.PNG);
+    background-size: cover;
+    
+    
+}
+  /*Code from the web to make vinyl rotate*/
+  /*https://stackoverflow.com/questions/10123700/how-to-make-a-picture-rotate-continuously*/
+
+  @keyframes rotate{
+    from {
+        transform: rotate(0deg);
+      }
+      to { 
+        transform: rotate(360deg);
+      }
+}
+.vinyl{
+
+    background-image: url(images/polyVinyl.png);
+        grid-area: 2 / 1 / span 6 / span 6;
+    background-position:center;
+    background-size: contain;
+    background-repeat:no-repeat;
+
+    /*Code from the web to make it rotate*/
+    animation-name: rotate; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+.vinylColour{
+    grid-area: 2 / 1 / span 6 / span 6;
+    background-color: black;
+    z-index: -1;
+}
+/*Button styling*/
+
+.grid2 button{
+    opacity: .9;
+    height: 75%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: firebrick;
+    border-style: none;
+
+}
+.grid2 button:hover{
+    opacity: 95;
+    z-index: 2;
+    background-color: rgb(204, 204, 21);
+}
+.button1{
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+.button2{
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.button3{
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+.button4{
+    grid-area: 5 / 1 / span 1 / span 1;
+}
+.button5{
+    grid-area: 6 / 1 / span 1 / span 1;
+}
+.button6{
+    grid-area: 2 / 5 / span 1 / span 1;
+}
+.button7{
+    grid-area: 3 / 5 / span 1 / span 1;
+}
+.button8{
+    grid-area: 4 / 5 / span 1 / span 1;
+}
+.button9{
+    grid-area: 5 / 5 / span 1 / span 1;
+}
+.button10{
+    grid-area: 6 / 5 / span 1 / span 1;
+}
+
+#button11{
+    grid-area: 2 / 2 / span 1 / span 4;
+    height: 25%;
+    width:50%;
+    margin-left: 2%;
+}
+
+/*Audio on page - hiding*/
+
+.hiddenAudio{
+    display: none;
+}
