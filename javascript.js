@@ -11,5 +11,12 @@ function playMusic(audio)
 
 function stopMusic()
 {
+    
     music.pause();
-}
+    
+    }
+
+    function startMusic(){
+        music.play();
+    }
+    
